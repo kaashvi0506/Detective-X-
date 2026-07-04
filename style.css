@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+        radial-gradient(circle at 20% 20%,#5b0000,transparent),
+        radial-gradient(circle at 80% 80%,#00005b,transparent),
+        #050505;
+    animation:glow 8s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes glow{
+    from{
+        filter:hue-rotate(0deg);
+    }
+    to{
+        filter:hue-rotate(90deg);
+    }
+}
+
+.game-container{
+    padding:30px;
+    text-align:center;
+}
+
+.title h1{
+    font-size:4rem;
+    color:gold;
+    text-shadow:0 0 20px gold;
+}
+
+.title h2{
+    margin:10px 0 30px;
+}
+
+.story{
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.timer{
+    margin:25px;
+    font-size:1.5rem;
+    color:#ff5555;
+}
+
+.room{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin:50px 0;
+}
+
+.clue{
+    width:130px;
+    height:130px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    transform-style:preserve-3d;
+}
+
+.clue:hover{
+    transform:
+        perspective(1000px)
+        rotateY(20deg)
+        rotateX(10deg)
+        scale(1.1);
+
+    box-shadow:
+        0 0 30px gold;
+}
+
+.inventory{
+    width:300px;
+    margin:30px auto;
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+}
+
+.inventory li{
+    margin:10px;
+    text-align:left;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    background:gold;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@media(max-width:700px){
+
+.title h1{
+    font-size:2.3rem;
+}
+
+.clue{
+    width:100px;
+    height:100px;
+    font-size:2rem;
+}
+}
