@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detective X: Blackwood Mansion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="game-container">
+
+    <div class="title">
+        <h1>🕵️ DETECTIVE X</h1>
+        <h2>Escape From Blackwood Mansion</h2>
+    </div>
+
+    <div class="story">
+        <p>
+            The legendary Crimson Diamond has been stolen.
+            Search the mansion and collect all clues before
+            the thief escapes.
+        </p>
+    </div>
+
+    <div class="timer">
+        ⏳ Time Left:
+        <span id="time">15:00</span>
+    </div>
+
+    <h3>Crime Scene Investigation</h3>
+
+    <div class="room">
+
+        <div class="clue blood"
+             onclick="collectClue('Blood Stain')">
+            🩸
+        </div>
+
+        <div class="clue key"
+             onclick="collectClue('Golden Key')">
+            🔑
+        </div>
+
+        <div class="clue note"
+             onclick="collectClue('Secret Note')">
+            📜
+        </div>
+
+        <div class="clue diamond"
+             onclick="collectClue('Diamond Fragment')">
+            💎
+        </div>
+
+    </div>
+
+    <div class="inventory">
+        <h3>🎒 Inventory</h3>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <button id="solveBtn"
+            onclick="solveCase()"
+            disabled>
+        Solve The Mystery
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
